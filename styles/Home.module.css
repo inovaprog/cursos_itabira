@@ -8,12 +8,144 @@
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.topo img{
+  width: 100%;
+}
+
+.cursosTitle{
+  padding: 30;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+.textoCurso{
+  flex:1;
+  justify-content: "center";
+  align-items: "center";
+  display: flex;
+  padding: 20px;
+  padding-top: 40px;
+  height: 500px;
+  flex-direction: column;
+}
+
+@media (max-width: 900px){
+  .foto{
+    width: 100%;
+  }
+
+  .sobre{
+    width: 100%;
+    display:flex; 
+    flex-direction:column;
+  }
+
+  .cursos{
+    width: 100%;
+    display:flex; 
+    flex-direction:column;
+  }
+
+  .textoSobre{
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .textoDireita{
+    width: 100%;
+    padding: 10px;
+    float: right;
+  }
+
+  .imgCurso{
+    width: 100%;
+  }
+
+}
+
+.textoDireita img{
+  width: 100%;
+}
+
+@media (min-width: 900px){
+  .textoSobre{
+    width: 50%;
+    padding: 20px;
+  }
+
+  .textoDireita{
+    width: 50%;
+    padding: 10px;
+    float: right;
+  }
+
+  .sobre{
+    width: 100%;
+    display:flex; 
+    flex-direction:row;
+  }
+
+  .cursos{
+    width: 100%;
+    display:flex; 
+    flex-direction:row;
+  }
+
+  .imgCurso{
+    width: 50%;
+  }
+
+  .textoCurso{
+    padding-top: 150px;
+  }
+
+
+}
+.foto{
+  width: 100%;
+  padding: 2px;
+}
+.foto img{
+  width: 100%;
+}
+
+.galeria{
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+}
+
+.cursos{
+  border-bottom: 1px solid #eaeaea;
+}
+
+.sobre{
+  background-color: #dfdbdb;
+}
+
+.imgCurso{
+  display:flex; 
+  align-content: center;
+  padding: 30px;
+}
+
+.imgCurso img{
+  width: 100%;
+}
+
+.textoCurso Button{
+  margin-top: 30px;
+}
+
+.foto img{
+  width: 100%;
 }
 
 .footer {
