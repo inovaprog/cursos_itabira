@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Cursos.com Itabira</title>
         <link rel="icon" href="/favicon.ico" />
         <script
           src="https://unpkg.com/react/umd/react.production.min.js"
