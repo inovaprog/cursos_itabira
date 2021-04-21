@@ -173,6 +173,14 @@ export default function Home() {
         </div>
       </main>
 
+      <div className={styles.cursosTitle} id="galeria">
+        <h2>CONTATO</h2>
+      </div>
+      <div className={styles.contato}>
+        <div className={styles.c}>Rua 1, 1234 Centro - Itabira/MG</div>
+        <div className={styles.c}>31 99999-9999</div>
+        <div className={styles.c}>email@souemail.com.br</div>
+      </div>
       <footer className={styles.footer}>
         <a
           href="https://www.instagram.com/inovaprog"
