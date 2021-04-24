@@ -8,154 +8,145 @@
 }
 
 .main {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.topo img{
+.topo img {
   width: 100%;
 }
 
-.cursosTitle{
+.cursosTitle {
   padding: 30;
   padding-top: 30px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.c{
-  margin:20px;
+.cursosTitle h2{
+  font-size: 25px;
 }
 
-.textoCurso{
-  flex:1;
+.c {
+  margin: 20px;
+}
+
+.textoCurso {
+  flex: 1;
   justify-content: "center";
   align-items: "center";
   display: flex;
   padding: 20px;
-  padding-top: 40px;
+  padding-top: 20px;
   height: 500px;
   flex-direction: column;
 }
 
-@media (max-width: 900px){
-  .foto{
+@media (max-width: 900px) {
+  .foto {
     width: 100%;
   }
-
-  .sobre{
+  .sobre {
     width: 100%;
-    display:flex; 
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
   }
-
-  .cursos{
+  .cursos {
     width: 100%;
-    display:flex; 
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
   }
-
-  .textoSobre{
+  .textoSobre {
     width: 100%;
     padding: 10px;
   }
-  
-  .textoDireita{
+  .textoDireita {
     width: 100%;
     padding: 10px;
     float: right;
   }
-
-  .imgCurso{
+  .imgCurso {
     width: 100%;
   }
-
 }
 
-.textoDireita img{
+.textoDireita img {
   width: 100%;
 }
 
-@media (min-width: 900px){
-  .textoSobre{
-    width: 50%;
+@media (min-width: 900px) {
+  .textoSobre {
+    width: 100%;
     padding: 20px;
   }
-
-  .textoDireita{
+  .textoDireita {
     width: 50%;
     padding: 10px;
     float: right;
   }
-
-  .sobre{
-    width: 100%;
-    display:flex; 
-    flex-direction:row;
+  .sobre {
+    width: 35%;
+    align-items: center;
+    float: right;
+    display: flex;
+    flex-direction: column;
   }
-
-  .cursos{
-    width: 70%;
-    display:flex; 
-    flex-direction:row;
+  .cursos {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
     max-height: 300px;
   }
-
-  .imgCurso{
+  .imgCurso {
     width: 50%;
   }
-
-  .textoCurso{
-    padding-top: 150px;
+  .textoCurso {
+    padding-top: 70px;
   }
-
-  .contato{
+  .contato {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-
 }
-.foto{
+
+.foto {
   width: 100%;
   padding: 2px;
 }
-.foto img{
+
+.foto img {
   width: 100%;
 }
 
-.galeria{
+.galeria {
   flex-direction: row;
   width: 100%;
   display: flex;
 }
 
-.cursos{
+.cursos {
   border-bottom: 1px solid #eaeaea;
 }
 
-.sobre{
-  background-color: #dfdbdb;
-}
-
-.imgCurso{
-  display:flex; 
+.imgCurso {
+  display: flex;
   align-content: center;
   padding: 30px;
 }
 
-.imgCurso img{
+.imgCurso img {
   width: 100%;
 }
 
-.textoCurso Button{
+.textoCurso Button {
   margin-top: 30px;
 }
 
-.foto img{
+.foto img {
   width: 100%;
 }
 
@@ -183,9 +174,7 @@
   text-decoration: none;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
+.title a:hover, .title a:focus, .title a:active {
   text-decoration: underline;
 }
 
@@ -195,8 +184,7 @@
   font-size: 4rem;
 }
 
-.title,
-.description {
+.title, .description {
   text-align: center;
 }
 
@@ -210,8 +198,7 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -235,9 +222,7 @@
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
+.card:hover, .card:focus, .card:active {
   color: #0070f3;
   border-color: #0070f3;
 }

@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
 
-export default function Home({cursos, galeria}) {
+export default function Home({ cursos, galeria }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -37,6 +37,7 @@ export default function Home({cursos, galeria}) {
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
           crossorigin="anonymous"
         />
+        <script src="https://kit.fontawesome.com/c16c56a8f1.js" crossorigin="anonymous"></script>
       </Head>
 
       <main className={styles.main}>
@@ -58,14 +59,10 @@ export default function Home({cursos, galeria}) {
           <img src="/topo.jpg"></img>
         </div>
         <div>
-          <div
-            className={styles.cursosTitle}
-            style={{ background: "#dfdbdb" }}
-            id="sobre"
-          >
-            <h2>SOBRE A EMPRESA</h2>
-          </div>
-          <div className={styles.sobre}>
+          <div className={styles.sobre} id="sobre">
+            <div className={styles.textoDireita}>
+              <img src="/logo.png" className={styles.logoCursos} />
+            </div>
             <div className={styles.textoSobre}>
               <p>
                 Contrary to popular belief, Lorem Ipsum is not simply random
@@ -88,47 +85,46 @@ export default function Home({cursos, galeria}) {
                 Rackham.
               </p>
             </div>
-            <div className={styles.textoDireita}>
-              <img src="/logo.png" className={styles.logoCursos} />
-            </div>
           </div>
           <div className={styles.cursosTitle} id="cursos">
             <h2>NOSSOS CURSOS</h2>
           </div>
           {cursos.map((curso) => (
-          <div className={styles.cursos}>
-            <div className={styles.imgCurso}>
-              <img src={curso.url.S}></img>
-            </div>
-            <div className={styles.textoCurso}>
-              <center>
-                <h3>
-                  {curso.titulo.S}
-                </h3>
-                <Button
-                  href="https://api.whatsapp.com/send?phone=5531992620858"
-                  target="_blanck"
-                  variant="primary"
-                >
-                  Matricule-se
+            <div className={styles.cursos}>
+              <div className={styles.imgCurso}>
+                <img src={curso.url.S}></img>
+              </div>
+              <div className={styles.textoCurso}>
+                <center>
+                  <h3>
+                    {curso.titulo.S}
+                  </h3>
+                  <Button
+                    href="https://api.whatsapp.com/send?phone=5531992620858"
+                    target="_blanck"
+                    variant="primary"
+                  >
+                    Saiba mais
                 </Button>{" "}
-              </center>
+                </center>
+              </div>
             </div>
-          </div>
           ))}
-      
+
+
+
           <div className={styles.cursosTitle} id="galeria">
             <h2>GALERIA DE FOTOS</h2>
           </div>
           <Container>
             <Row>
-            {galeria.map((foto) => (
-              <Col md={3}>
-                <div className={styles.foto}>
-                  <img src={foto}></img>
-                </div>
-              </Col>
-            ))}
+              {galeria.map((foto) => (
+                <Col md={3}>
+                  <div className={styles.foto}>
+                    <img src={foto}></img>
+                  </div>
+                </Col>
+              ))}
             </Row>
           </Container>
         </div>
@@ -138,9 +134,9 @@ export default function Home({cursos, galeria}) {
         <h2>CONTATO</h2>
       </div>
       <div className={styles.contato}>
-        <div className={styles.c}>Rua 1, 1234 Centro - Itabira/MG</div>
-        <div className={styles.c}>31 99999-9999</div>
-        <div className={styles.c}>email@souemail.com.br</div>
+        <div className={styles.c}><i class="fas fa-map-marker-alt"></i> Avenida Duque de Caxias - Esplanada da Estação (Prédio da Acita) - Itabira/MG</div>
+        <div className={styles.c}><i class="fab fa-whatsapp"></i> 31 99262-0858</div>
+        <div className={styles.c}><i class="far fa-envelope"></i> contato@cursositabira.com.br</div>
       </div>
       <footer className={styles.footer}>
         <a
