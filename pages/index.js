@@ -43,7 +43,7 @@ export default function Home({ cursos, galeria }) {
       <main className={styles.main}>
         <div className={styles.mNav}>
           <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-            <Navbar.Brand href="#home">Cursos.com</Navbar.Brand>
+            <Navbar.Brand href="#home"><img src="/logo.png" style={{maxWidth:"50px"}}></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
