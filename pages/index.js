@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({cursos, galeria}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -95,16 +95,15 @@ export default function Home() {
           <div className={styles.cursosTitle} id="cursos">
             <h2>NOSSOS CURSOS</h2>
           </div>
-
+          {cursos.map((curso) => (
           <div className={styles.cursos}>
             <div className={styles.imgCurso}>
-              <img src="https://via.placeholder.com/300"></img>
+              <img src={curso.url.S}></img>
             </div>
             <div className={styles.textoCurso}>
               <center>
                 <h3>
-                  Curso de Proteção de maquinas e equipamentos para empresas no
-                  segmento alimentício - NR12
+                  {curso.titulo.S}
                 </h3>
                 <Button
                   href="https://api.whatsapp.com/send?phone=5531992620858"
@@ -116,58 +115,20 @@ export default function Home() {
               </center>
             </div>
           </div>
-
-          <div className={styles.cursos}>
-            <div className={styles.imgCurso}>
-              <img src="https://via.placeholder.com/300"></img>
-            </div>
-            <div className={styles.textoCurso}>
-              <center>
-                <h3>
-                  Curso de Proteção de maquinas e equipamentos para empresas no
-                  segmento alimentício - NR12
-                </h3>
-                <Button
-                  href="https://api.whatsapp.com/send?phone=5531992620858"
-                  target="_blanck"
-                  variant="primary"
-                >
-                  Matricule-se
-                </Button>{" "}
-              </center>
-            </div>
-          </div>
-
+          ))}
+      
           <div className={styles.cursosTitle} id="galeria">
             <h2>GALERIA DE FOTOS</h2>
           </div>
           <Container>
             <Row>
+            {galeria.map((foto) => (
               <Col md={3}>
                 <div className={styles.foto}>
-                  <img src="http://via.placeholder.com/150x100"></img>
+                  <img src={foto}></img>
                 </div>
               </Col>
-              <Col md={3}>
-                <div className={styles.foto}>
-                  <img src="http://via.placeholder.com/150x100"></img>
-                </div>
-              </Col>
-              <Col md={3}>
-                <div className={styles.foto}>
-                  <img src="http://via.placeholder.com/150x100"></img>
-                </div>
-              </Col>
-              <Col md={3}>
-                <div className={styles.foto}>
-                  <img src="http://via.placeholder.com/150x100"></img>
-                </div>
-              </Col>
-              <Col md={3}>
-                <div className={styles.foto}>
-                  <img src="http://via.placeholder.com/150x100"></img>
-                </div>
-              </Col>
+            ))}
             </Row>
           </Container>
         </div>
@@ -193,4 +154,14 @@ export default function Home() {
       </footer>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const res = await fetch(`https://1sdknnxtrb.execute-api.us-east-2.amazonaws.com/default/api-prod`)
+  const data = await res.json()
+  var cursos = data.cursos
+  var galeria = data.galeria
+  return {
+    props: { cursos, galeria }, // will be passed to the page component as props
+  }
 }
