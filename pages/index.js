@@ -10,7 +10,6 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
-
 export default function Home({ cursos, galeria }) {
   return (
     <div className={styles.container}>
