@@ -10,7 +10,7 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
-export default function Home({ cursos, galeria }) {
+export default function Home({ cursos, galeria, treinamentos }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -42,13 +42,14 @@ export default function Home({ cursos, galeria }) {
       <main className={styles.main}>
         <div className={styles.mNav}>
           <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-            <Navbar.Brand href="#home"><img src="/logo.png" style={{maxWidth:"50px"}}></img></Navbar.Brand>
+            <Navbar.Brand href="#home"><img src="/logo.png" style={{ maxWidth: "50px" }}></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
                 <Nav.Link href="#">Home</Nav.Link>
                 <Nav.Link href="#sobre">Sobre a Cursos.com</Nav.Link>
                 <Nav.Link href="#cursos">Nossos Cursos</Nav.Link>
+                <Nav.Link href="#treinamentos">Nossos Treinamentos</Nav.Link>
                 <Nav.Link href="#galeria">Galeria de Fotos</Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -64,24 +65,10 @@ export default function Home({ cursos, galeria }) {
             </div>
             <div className={styles.textoSobre}>
               <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in
-                classical literature, discovered the undoubtable source. Lorem
-                Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-                written in 45 BC. This book is a treatise on the theory of
-                ethics, very popular during the Renaissance. The first line of
-                Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
-                in section 1.10.32. The standard chunk of Lorem Ipsum used since
-                the 1500s is reproduced below for those interested. Sections
-                1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-                Cicero are also reproduced in their exact original form,
-                accompanied by English versions from the 1914 translation by H.
-                Rackham.
+                Cursos.com consultoria, palestras e treinamentos < br/>
+                Uma empresa que ajuda você a ir mais longe, que ajuda você a se qualificar para o mercado de trabalho, com cursos de qualificação profissional e com treinamentos em Máquinas Pesadas em especial Movimentação de Carga.<br />
+                Cursos.com atende também empresas com treinamentos voltados para Rac's Requisitos de atividades críticas e De Acordo com as Nr's 06,11,12,18. Todos os treinamentos são realizados por Instrutores credenciados com experiência no assunto a ser abordado. <br />
+                Cursos.com, compromisso com a segurança e saúde ocupacional do colaborador em executar sua atividade com segurança e preservando o meio ambiente, palestras motivacionais e abordando assuntos escolhidos por nossos clientes, estamos sempre a disposição para treinar, capacitar e qualificar Você!!!
               </p>
             </div>
           </div>
@@ -89,6 +76,31 @@ export default function Home({ cursos, galeria }) {
             <h2>NOSSOS CURSOS</h2>
           </div>
           {cursos.map((curso) => (
+            <div className={styles.cursos}>
+              <div className={styles.imgCurso}>
+                <img src={curso.url.S}></img>
+              </div>
+              <div className={styles.textoCurso}>
+                <center>
+                  <h3>
+                    {curso.titulo.S}
+                  </h3>
+                  <Button
+                    href="https://api.whatsapp.com/send?phone=5531992620858"
+                    target="_blanck"
+                    variant="primary"
+                  >
+                    Saiba mais
+                </Button>{" "}
+                </center>
+              </div>
+            </div>
+          ))}
+
+          <div className={styles.cursosTitle} id="treinamentos">
+            <h2>NOSSOS TREINAMENTOS</h2>
+          </div>
+          {treinamentos.map((curso) => (
             <div className={styles.cursos}>
               <div className={styles.imgCurso}>
                 <img src={curso.url.S}></img>
@@ -156,7 +168,8 @@ export async function getServerSideProps(context) {
   const data = await res.json()
   var cursos = data.cursos
   var galeria = data.galeria
+  var treinamentos = data.treinamentos
   return {
-    props: { cursos, galeria }, // will be passed to the page component as props
+    props: { cursos, galeria, treinamentos }, // will be passed to the page component as props
   }
 }
