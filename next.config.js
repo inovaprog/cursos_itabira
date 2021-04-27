@@ -1,7 +1,7 @@
 module.exports = {
     env: {
-        REACT_APP_ACCESS_ID:"AKIAROO4JD6CZPFG5NEY",
-        REACT_APP_ACCESS_KEY:"UHc0tSEVeLP9wHQs3d88Mtaj40OKxRwKi6XHbvRp",
+        REACT_APP_ACCESS_ID:"AKIAROO4JD6CSVGI2RGF",
+        REACT_APP_ACCESS_KEY:"PXG3/9DoWpKKgv4zDie5L9ygBLbGijBOpgIY/yn+",
         REACT_APP_BUCKET_NAME:"fotos-sites",
         REACT_APP_REGION:"us-east-2"
     },

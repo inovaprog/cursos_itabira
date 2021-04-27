@@ -21,7 +21,8 @@ function Upload() {
                 body: JSON.stringify({
                     titulo: event.target.titulo.value,
                     descricao: event.target.descricao.value,
-                    url: event.target.url.value
+                    url: event.target.url.value,
+                    tipo: event.target.tipo.value
                 }),
                 headers: {
                     'Content-Type': 'application/json'
@@ -69,6 +70,10 @@ function Upload() {
                     <Form.Control type="text" name="descricao" placeholder="Descrição do Curso" />
                     <br />
                     <Form.Control type="text" name="url" value={foto} style={{ display: "none" }} />
+                    <Form.Control as="select" name="tipo" multiple>
+                        <option>Curso</option>
+                        <option>Treinamento</option>
+                    </Form.Control>
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Enviar
