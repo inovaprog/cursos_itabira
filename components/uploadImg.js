@@ -57,28 +57,33 @@ function Upload() {
     }
 
     return (
-        <div>
-            <form className="form-img" onSubmit={handlerClick} onChange={() => setFoto(fileImput.current.files[0].name)}>
-                <input type='file' ref={fileImput}></input>
+        <div style={{flexDirection:"row", width:"100%", padding:"15px"}}>
+            <div style={{width:"50%", float:"right"}}>
+                <img style={{width:"100%"}} src="https://via.placeholder.com/300"></img>
+            </div>
+            <div style={{width:"50%"}}>
+                <form className="form-img" onSubmit={handlerClick} onChange={() => setFoto(fileImput.current.files[0].name)}>
+                    <input type='file' ref={fileImput}></input>
+                    <br />
+                </form>
                 <br />
-            </form>
-            <br />
-            <Form onSubmit={registerCurso}>
-                <Form.Group>
-                    <Form.Control type="text" name="titulo" placeholder="Titulo do Curso" />
-                    <br />
-                    <Form.Control type="text" name="descricao" placeholder="Descrição do Curso" />
-                    <br />
-                    <Form.Control type="text" name="url" value={foto} style={{ display: "none" }} />
-                    <Form.Control as="select" name="tipo" multiple>
-                        <option>Curso</option>
-                        <option>Treinamento</option>
-                    </Form.Control>
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Enviar
+                <Form onSubmit={registerCurso}>
+                    <Form.Group>
+                        <Form.Control type="text" name="titulo" placeholder="Titulo do Curso" />
+                        <br />
+                        <Form.Control type="text" name="descricao" placeholder="Descrição do Curso" />
+                        <br />
+                        <Form.Control type="text" name="url" value={foto} style={{ display: "none" }} />
+                        <Form.Control as="select" name="tipo" multiple>
+                            <option>Curso</option>
+                            <option>Treinamento</option>
+                        </Form.Control>
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                        Enviar
                     </Button>
-            </Form>
+                </Form>
+            </div>
         </div>
     )
 }
