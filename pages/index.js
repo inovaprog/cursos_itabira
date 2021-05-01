@@ -164,7 +164,7 @@ export default function Home({ cursos, galeria, treinamentos }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`https://1sdknnxtrb.execute-api.us-east-2.amazonaws.com/default/api-prod`)
+  const res = await fetch(`https://v0xgonrnsd.execute-api.us-east-2.amazonaws.com/default/api-prod`)
   const data = await res.json()
   var cursos = data.cursos
   var galeria = data.galeria

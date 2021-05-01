@@ -21,7 +21,7 @@ function Upload() {
     const registerCurso = async event => {
         event.preventDefault()
         const res = await fetch(
-            'https://v0xgonrnsd.execute-api.us-east-2.amazonaws.com/default/api-prod',
+            'https://1sdknnxtrb.execute-api.us-east-2.amazonaws.com/default/api-prod',
             {
                 body: JSON.stringify({
                     titulo: event.target.titulo.value,
@@ -44,7 +44,7 @@ function Upload() {
         event.preventDefault()
         let file = fileImput.current.files[0]
         const res = await fetch(
-            'https://v0xgonrnsd.execute-api.us-east-2.amazonaws.com/default/api-prod',
+            'https://ea13vnre32.execute-api.us-east-2.amazonaws.com/default/upload_galery',
             {
                 body: file,
                 headers: {
@@ -73,31 +73,15 @@ function Upload() {
                                 <Col md={6}>
                                     <input type='file' ref={fileImput}></input>
                                 </Col>
-
                             </Row>
                         </form>
+                        <Button variant="primary" href="/list" style={{ display: controlButton, margin:"20px" }}>
+                            OK
+                        </Button>
+                        <Button variant="primary" href="/up" style={{ display: controlButton, margin:"20px" }}>
+                            Adicionar outra
+                        </Button>
                         <br />
-                        <Form onSubmit={registerCurso}>
-                            <Form.Group>
-                                <Form.Label>Nome do Curso</Form.Label>
-                                <Form.Control type="text" name="titulo" placeholder="Titulo do Curso" />
-                                <br />
-                                <Form.Label>Descrição do Curso</Form.Label>
-                                <Form.Control type="text" name="descricao" placeholder="Descrição do Curso" style={{height:100}} />
-                                <br />
-                                <Form.Control type="text" name="url" value={foto} style={{ display: "none" }} />
-                                <Form.Group>
-                                    <Form.Label>Tipo de Curso</Form.Label>
-                                    <Form.Control as="select" defaultValue="Curso" name="tipo">
-                                        <option>Curso</option>
-                                        <option>Treinamento</option>
-                                    </Form.Control>
-                                </Form.Group>
-                            </Form.Group>
-                            <Button variant="primary" type="submit" style={{ display: controlButton }}>
-                                Enviar
-                            </Button>
-                        </Form>
                     </center>
                 </Col>
             </Row>

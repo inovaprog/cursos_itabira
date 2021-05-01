@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Upload from "../components/uploadImg"
+import Upload from "../components/uploadgaleria"
 import {
     Button,
     Col,
@@ -51,7 +51,7 @@ export default function Add() {
                     </Navbar>
                 </div>
                 <div>
-                    <center><h1>Adicionar novo Curso</h1></center>
+                    <center><h1>Adicionar nova foto na galeria</h1></center>
                 </div>
                 <Container>
                     <Upload></Upload>
