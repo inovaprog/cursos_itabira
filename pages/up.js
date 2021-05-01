@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Upload from "../components/uploadImg"
+import Upload from "../components/uploadgaleria"
 import {
     Button,
     Col,
