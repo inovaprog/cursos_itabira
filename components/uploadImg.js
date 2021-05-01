@@ -73,15 +73,17 @@ function Upload() {
                                 <Col md={6}>
                                     <input type='file' ref={fileImput}></input>
                                 </Col>
-                              
+
                             </Row>
                         </form>
                         <br />
                         <Form onSubmit={registerCurso}>
                             <Form.Group>
+                                <Form.Label>Nome do Curso</Form.Label>
                                 <Form.Control type="text" name="titulo" placeholder="Titulo do Curso" />
                                 <br />
-                                <Form.Control type="text" name="descricao" placeholder="Descrição do Curso" />
+                                <Form.Label>Descrição do Curso</Form.Label>
+                                <Form.Control type="text" name="descricao" placeholder="Descrição do Curso" style={{height:100}} />
                                 <br />
                                 <Form.Control type="text" name="url" value={foto} style={{ display: "none" }} />
                                 <Form.Group>

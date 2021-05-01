@@ -46,11 +46,11 @@ export default function Home({ cursos, galeria, treinamentos }) {
             <main className={styles.main}>
                 <div className={styles.mNav}>
                     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-                        <Navbar.Brand href="#home"><img src="/logo.png" style={{ maxWidth: "50px" }}></img></Navbar.Brand>
+                        <Navbar.Brand href="/"><img src="/logo.png" style={{ maxWidth: "50px" }}></img></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     </Navbar>
                 </div>
-                <Container>
+                <Container style={{marginTop:20}}>
                     <Row>
                         <Col sm={6}>
                             <center><Button href="/add" variant="primary">Adicionar novo curso</Button></center>
@@ -65,7 +65,7 @@ export default function Home({ cursos, galeria, treinamentos }) {
                         <center><h2>CURSOS</h2></center>
                     </div>
                     <Container>
-                        <Row style={{ padding: 20 }}>
+                        <Row style={{ padding: 20, backgroundColor:"#dedede" }}>
                             <Col sm={2}>
                                 Imagem
                                 </Col>
@@ -92,7 +92,7 @@ export default function Home({ cursos, galeria, treinamentos }) {
                                     {curso.descricao.S}
                                 </Col>
                                 <Col sm={1}>
-                                    <a onClick={deleteCurso.bind(this, curso.titulo.S)}><i class="fas fa-trash-alt"></i></a>
+                                    <Button onClick={deleteCurso.bind(this, curso.titulo.S)}>Excluir</Button>
                                 </Col>
 
                             </Row>
@@ -100,7 +100,7 @@ export default function Home({ cursos, galeria, treinamentos }) {
 
 
                         <div className={styles.cursosTitle} id="treinamentos">
-                            <h2>NOSSOS TREINAMENTOS</h2>
+                            <h2>TREINAMENTOS</h2>
                         </div>
                         {treinamentos.map((curso) => (
                             <Row style={{ padding: 20, borderBottom: "1px solid #eaeaea" }}>
@@ -114,7 +114,7 @@ export default function Home({ cursos, galeria, treinamentos }) {
                                     {curso.descricao.S}
                                 </Col>
                                 <Col sm={1}>
-                                    <a onClick={deleteCurso.bind(this, curso.titulo.S)}><i class="fas fa-trash-alt"></i></a>
+                                    <Button onClick={deleteCurso.bind(this, curso.titulo.S)}>Excluir</Button>
                                 </Col>
 
                             </Row>
@@ -128,10 +128,10 @@ export default function Home({ cursos, galeria, treinamentos }) {
                     <Container>
                         <Row>
                             {galeria.map((foto) => (
-                                <Col md={3}>
+                                <Col md={3} style={{marginTop:10}}>
                                     <div className={styles.foto}>
                                         <img src={foto}></img>
-                                        <a onClick={deleteCurso.bind(this, foto)}><i class="fas fa-trash-alt"></i></a>
+                                        <Button variant="outline-info" onClick={deleteCurso.bind(this, foto)}>Excluir</Button>
                                     </div>
                                 </Col>
                             ))}

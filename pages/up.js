@@ -44,14 +44,14 @@ export default function Add() {
             <main className={styles.main}>
                 <div className={styles.mNav}>
                     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-                        <Navbar.Brand href="#home"><img src="/logo.png" style={{ maxWidth: "50px" }}></img></Navbar.Brand>
+                        <Navbar.Brand href="/list"><img src="/logo.png" style={{ maxWidth: "50px" }}></img></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                         </Navbar.Collapse>
                     </Navbar>
                 </div>
                 <div>
-                    <center><h1>Adicionar novo Curso</h1></center>
+                    <center><h1>Adicionar nova foto na galeria</h1></center>
                 </div>
                 <Container>
                     <Upload></Upload>
