@@ -111,6 +111,11 @@ export default function Home({ cursos, galeria, treinamentos }) {
                                     Login
                                 </Button>
                             </Form>
+                            <div style={{padding:20, color:"red", fontSize:15}}>
+                                <a target="_blanck" href="https://accounts.zoho.com/signin?servicename=VirtualOffice&signupurl=https://www.zoho.com/workplace/pricing.html">
+                                    Entrar no email
+                                </a>
+                            </div>
                         </Col>
                     </Row>
                 </Container>

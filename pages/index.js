@@ -51,6 +51,7 @@ export default function Home({ cursos, galeria, treinamentos }) {
                 <Nav.Link href="#cursos">Nossos Cursos</Nav.Link>
                 <Nav.Link href="#treinamentos">Nossos Treinamentos</Nav.Link>
                 <Nav.Link href="#galeria">Galeria de Fotos</Nav.Link>
+                <Nav.Link style={{color:"red"}} href="/login">Login</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -168,6 +169,7 @@ export default function Home({ cursos, galeria, treinamentos }) {
           Desenvolvido por InovaProg{" "}
           <img src="/inova.jpeg" alt="Logo" className={styles.logo} />
         </a>
+        
       </footer>
     </div>
   );
