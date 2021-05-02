@@ -13,8 +13,6 @@ import Router from 'next/router'
 import styles from "../styles/Home.module.css";
 
 export default function Home({ cursos, galeria, treinamentos }) {
-
-
     return (
         <div className={styles.container}>
             <Head>
@@ -172,12 +170,17 @@ async function deleteCurso(titulo) {
                 titulo: titulo
             }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization':window.sessionStorage.getItem('token')
             },
             method: 'DELETE'
         }
     )
     const result = await res.json()
-    console.log(result)
-    Router.push('/list')
+    if(result.status == "fail"){
+        Router.push("/login")
+    }
+    else{
+        Router.push('/list')
+    }
 }
