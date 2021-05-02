@@ -30,13 +30,16 @@ function Upload() {
                     tipo: event.target.tipo.value
                 }),
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization':window.sessionStorage.getItem('token')
                 },
                 method: 'POST'
             }
         )
         const result = await res.json()
-        console.log(result)
+        if(result.status == "fail"){
+            Router.push("/login")
+        }
         Router.push('/list')
     }
 
@@ -48,13 +51,16 @@ function Upload() {
             {
                 body: file,
                 headers: {
-                    'Content-Type': 'multipart/form-data'
+                    'Content-Type': 'multipart/form-data',
+                    'Authorization':window.sessionStorage.getItem('token')
                 },
                 method: 'PUT'
             }
         )
         const result = await res.json()
-        console.log(result.url)
+        if(result.status == "fail"){
+            Router.push("/login")
+        }
         setFoto(result.url)
         setImg(result.url)
         setControlButton("block")
