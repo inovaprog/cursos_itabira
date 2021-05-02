@@ -65,7 +65,7 @@ export default function Home({ cursos, galeria, treinamentos }) {
             </div>
             <div className={styles.textoSobre}>
               <p>
-                Cursos.com consultoria, palestras e treinamentos < br/>
+                Cursos.com consultoria, palestras e treinamentos < br />
                 Uma empresa que ajuda você a ir mais longe, que ajuda você a se qualificar para o mercado de trabalho, com cursos de qualificação profissional e com treinamentos em Máquinas Pesadas em especial Movimentação de Carga.<br />
                 Cursos.com atende também empresas com treinamentos voltados para Rac's Requisitos de atividades críticas e De Acordo com as Nr's 06,11,12,18. Todos os treinamentos são realizados por Instrutores credenciados com experiência no assunto a ser abordado. <br />
                 Cursos.com, compromisso com a segurança e saúde ocupacional do colaborador em executar sua atividade com segurança e preservando o meio ambiente, palestras motivacionais e abordando assuntos escolhidos por nossos clientes, estamos sempre a disposição para treinar, capacitar e qualificar Você!!!
@@ -85,6 +85,9 @@ export default function Home({ cursos, galeria, treinamentos }) {
                   <h3>
                     {curso.titulo.S}
                   </h3>
+                  <h5>
+                    {curso.descricao.S}
+                  </h5>
                   <Button
                     href="https://api.whatsapp.com/send?phone=5531992620858"
                     target="_blanck"
@@ -110,6 +113,9 @@ export default function Home({ cursos, galeria, treinamentos }) {
                   <h3>
                     {curso.titulo.S}
                   </h3>
+                  <h5>
+                    {curso.descricao.S}
+                  </h5>
                   <Button
                     href="https://api.whatsapp.com/send?phone=5531992620858"
                     target="_blanck"
@@ -146,8 +152,12 @@ export default function Home({ cursos, galeria, treinamentos }) {
       </div>
       <div className={styles.contato}>
         <div className={styles.c}><i class="fas fa-map-marker-alt"></i> Avenida Duque de Caxias - Esplanada da Estação (Prédio da Acita) - Itabira/MG</div>
-        <div className={styles.c}><i class="fab fa-whatsapp"></i> 31 99262-0858</div>
-        <div className={styles.c}><i class="far fa-envelope"></i> contato@cursositabira.com.br</div>
+        <a href="https://api.whatsapp.com/send?phone=5531992620858" target="_blanck">
+          <div className={styles.c}><i class="fab fa-whatsapp"></i> 31 99262-0858</div>
+        </a>
+        <a href="malito:contato@cursositabira.com.br">
+          <div className={styles.c}><i class="far fa-envelope"></i> contato@cursositabira.com.br</div>
+        </a>
       </div>
       <footer className={styles.footer}>
         <a
