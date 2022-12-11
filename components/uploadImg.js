@@ -27,7 +27,8 @@ function Upload() {
                     titulo: event.target.titulo.value,
                     descricao: event.target.descricao.value,
                     url: event.target.url.value,
-                    tipo: event.target.tipo.value
+                    tipo: event.target.tipo.value,
+                    link: event.target.link.value,
                 }),
                 headers: {
                     'Content-Type': 'application/json',
@@ -90,6 +91,9 @@ function Upload() {
                                 <br />
                                 <Form.Label>Descrição do Curso</Form.Label>
                                 <Form.Control type="text" name="descricao" placeholder="Descrição do Curso" style={{height:100}} />
+                                <br />
+                                <Form.Label>Link Externo</Form.Label>
+                                <Form.Control type="text" name="link" placeholder="Link Externo" style={{height:100}} />
                                 <br />
                                 <Form.Control type="text" name="url" value={foto} style={{ display: "none" }} />
                                 <Form.Group>
