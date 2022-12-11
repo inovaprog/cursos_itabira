@@ -88,7 +88,6 @@ export default function Home({ cursos, galeria, treinamentos }) {
                   </h3>
                   <h5>
                     {curso.descricao.S}
-                    {curso.link?.S}
                   </h5>
                   <Button
                     href={curso.link && curso.link?.S != ''  ? "https://" + curso.link?.S : "https://api.whatsapp.com/send?phone=5531992620858"}
@@ -119,7 +118,7 @@ export default function Home({ cursos, galeria, treinamentos }) {
                     {curso.descricao.S}
                   </h5>
                   <Button
-                    href="https://api.whatsapp.com/send?phone=5531992620858"
+                    href={curso.link && curso.link?.S != ''  ? "https://" + curso.link?.S : "https://api.whatsapp.com/send?phone=5531992620858"}
                     target="_blanck"
                     variant="primary"
                   >
