@@ -51,7 +51,7 @@ export default function Home({ cursos, galeria, treinamentos }) {
                 <Container style={{marginTop:20}}>
                     <Row>
                         <Col sm={6} style={{marginBottom:20}}>
-                            <center><Button href="/add" variant="primary">Adicionar novo curso</Button></center>
+                            <center><Button href="/add" variant="primary">Adicionar novo curso ou treinamento</Button></center>
                         </Col>
                         <Col sm={6} >
                             <center><Button href="/up" variant="primary">Adicionar nova foto</Button></center>
